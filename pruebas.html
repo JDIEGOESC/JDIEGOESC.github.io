@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Invisible</title>
+  <style>
+    .invisible {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="miElemento" class="invisible">
+    Este contenido está invisible.
+  </div>
+
+  <button onclick="toggleVisibility()">Mostrar/Esconder</button>
+
+  <script>
+    function toggleVisibility() 
+    {
+      var elemento = document.getElementById("miElemento");
+      if (elemento.style.visibility === "hidden") 
+      {
+        elemento.style.visibility = "visible";
+      } 
+
+      else 
+      {
+        elemento.style.visibility = "hidden";
+      }
+    }
+  </script>
+
+</body>
+</html>
